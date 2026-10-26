@@ -8,5 +8,5 @@ class Solution:
         # z is a 1D NumPy array of logits
         # Hint: subtract max(z) for numerical stability before computing exp
         # return np.round(your_answer, 4)
-        total = sum(np.exp(z - max(z)))
+        total = np.sum(np.exp(z - max(z)))
         return np.round(np.exp(z-max(z))/total, 4)
